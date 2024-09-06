@@ -11,10 +11,18 @@ function App() {
 
       <header>
         Event Tickets
+        <a
+          className="App-link"
+          href="tickets"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          BAck to tickets page!
+        </a>
       </header>
       
     </div>
   );
 }
-element.innerHTML = element.innerHTML  +   <a href="tickets.js"> </a>
+
 export default App;
