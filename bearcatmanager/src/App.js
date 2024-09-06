@@ -52,9 +52,17 @@ function App() {
 
       {/* Main Content */}
       <header>
-        <p>Bearcat Manager!</p>
-        <h1>Event Tickets</h1>
+        Event Tickets
+        <a
+          className="App-link"
+          href="tickets"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Back to tickets page!
+        </a>
       </header>
+      
     </div>
   );
 }
