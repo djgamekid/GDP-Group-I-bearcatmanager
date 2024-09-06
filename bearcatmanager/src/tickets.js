@@ -1,9 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
 function App() {
     return (
-
-<a href="https://reactjs.org">Back to home page</a>
+<a
+className="App-link"
+href="https://reactjs.org"
+target="_blank"
+rel="noopener noreferrer"
+>
+Back to home page
+</a>
     )
 }
-export default App;
