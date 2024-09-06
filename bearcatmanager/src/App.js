@@ -10,13 +10,13 @@ function App() {
 
       <header>
         Event Tickets
+        <br />
         <a
-          className="App-link"
+          className="font-bold"
           href="tickets"
           target="_blank"
-          rel="noopener noreferrer"
         >
-          BAck to tickets page!
+          Back to tickets page!
         </a>
       </header>
       
