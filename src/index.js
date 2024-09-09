@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import Admin from './admin';
 import CreateEvent from './CreateEvent';
-import Login from './Login';
 //import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,7 +12,6 @@ root.render(
     <App />
     <Admin />
     <CreateEvent />
-    <Login />
   </React.StrictMode>
 );
 
