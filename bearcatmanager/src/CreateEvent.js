@@ -5,9 +5,9 @@ function CreateEvent() {
   return (
     <div className="CreateEvent">
       <header className="CreateEvent-header">
-        <img src={logo} className="CreateEvent-logo" alt="logo" />
+        
         <p>
-          Edit <code>src/Admin.js</code> and save to reload.
+          Edit <code>src/CreateEvent.js</code> and save to reload.
         </p>
         <a
           className="App-link"
