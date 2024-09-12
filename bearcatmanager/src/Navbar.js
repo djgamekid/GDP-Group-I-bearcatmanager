@@ -11,7 +11,7 @@ function Navbar() {
       </div>
       <ul className="nav-links">
         <li><Link to="/">Login</Link></li>
-        <li><Link to="/CreteEvent">Create an Event</Link></li>
+        <li><Link to="/CreateEvent">Create an Event</Link></li>
         <li><Link to="/about">About</Link></li>
         <li><Link to="/services">Services</Link></li>
         <li><Link to="/contact">Contact</Link></li>
