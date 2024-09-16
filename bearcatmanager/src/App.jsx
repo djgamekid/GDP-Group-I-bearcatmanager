@@ -26,10 +26,13 @@ import './App.css';
 import Login from './Login';
 import CreateEvent from './CreateEvent';
 import Navbar from './Navbar';
+import Container from './Container';
 
  
 function App() {
+  
   return (
+    
     <Router>
       <div className="App">
         <Navbar />
@@ -39,7 +42,10 @@ function App() {
         </Routes>
       </div>
     </Router>
+    
   );
+  
 }
+
  
 export default App;
