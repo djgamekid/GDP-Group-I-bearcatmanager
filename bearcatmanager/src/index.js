@@ -5,14 +5,13 @@ import App from './App';
 import CreateEvent from './CreateEvent';
 import FindanEvent from './FindanEvent';
 import Login from './Login';
-import admin from './admin';
-//import reportWebVitals from './reportWebVitals';
+import Admin from './Admin';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <admin />
+    <Admin />
     <CreateEvent />
     <Login />
     <FindanEvent />
