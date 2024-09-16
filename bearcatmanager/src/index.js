@@ -3,17 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import CreateEvent from './CreateEvent';
+import FindanEvent from './FindanEvent';
 import Login from './Login';
-import Admin from './admin';
-//import reportWebVitals from './reportWebVitals';
+import Admin from './Admin';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <Admin/>
+    <Admin />
     <CreateEvent />
     <Login />
+    <FindanEvent />
   </React.StrictMode>
 );
 
