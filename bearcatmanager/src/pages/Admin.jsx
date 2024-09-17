@@ -1,6 +1,7 @@
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from '@radix-ui/react-navigation-menu';
 import '../App.css';
-// import { TicketCarouselComponent } from '../../components/ticket-carousel';
+import { TicketDropdownComponent } from '../components/ticket-dropdown';
+import { BearcatTicketCarousel } from '../components/bearcat-ticket-carousel';
 
 function Admin() {
   return (
@@ -36,7 +37,10 @@ function Admin() {
         </NavigationMenuItem>
       </NavigationMenu>
 
-      {/* <TicketCarouselComponent /> */}
+      <TicketDropdownComponent />
+      <>
+        <BearcatTicketCarousel />
+      </>
     </>
   );
 }
