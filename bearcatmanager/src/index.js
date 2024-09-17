@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './pages/App';
 import CreateEvent from './pages/CreateEvent';
 import FindanEvent from './pages/FindanEvent';
 import Login from './pages/Login';
