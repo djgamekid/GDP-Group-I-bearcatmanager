@@ -1,9 +1,17 @@
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from '@radix-ui/react-navigation-menu';
-import './App.css';
+import '../App.css';
+// import { TicketCarouselComponent } from '../../components/ticket-carousel';
 
 function Admin() {
   return (
     <>
+
+      <div className="Admin">
+        <header className="Admin-header">
+          Welcome Back Admin!
+
+        </header>
+      </div>
       <NavigationMenu>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
@@ -28,14 +36,7 @@ function Admin() {
         </NavigationMenuItem>
       </NavigationMenu>
 
-      <div className="Admin">
-        <header className="Admin-header">
-          <p>
-            Welcome to the Admin Page!
-          </p>
-
-        </header>
-      </div>
+      {/* <TicketCarouselComponent /> */}
     </>
   );
 }

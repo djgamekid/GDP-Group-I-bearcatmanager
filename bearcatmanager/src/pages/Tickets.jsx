@@ -1,11 +1,11 @@
 import React from "react";
 // import QRCode from "qrcode.react"; //npm install qrcode.react
 
-function App() {
+function Tickets() {
   // const qrValue = "https://reactjs.org"; // Predefined value for the QR code
 
   return (
-    <div className="App">
+    <div className="Tickets">
       <h1>Pre-loaded QR Code</h1> {/* Heading for the QR code generator */}
 
       {/* QRCode component that generates the QR code */}
@@ -34,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default Tickets;

@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import CreateEvent from './CreateEvent';
-import FindanEvent from './FindanEvent';
-import Login from './Login';
-import Admin from './Admin';
+import CreateEvent from './pages/CreateEvent';
+import FindanEvent from './pages/FindanEvent';
+import Login from './pages/Login';
+import Admin from './pages/Admin';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
