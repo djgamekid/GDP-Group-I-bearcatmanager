@@ -26,14 +26,7 @@ import './App.css';
 import Login from './Login';
 import CreateEvent from './CreateEvent';
 import Navbar from './Navbar';
-<<<<<<< HEAD:bearcatmanager/src/App.jsx
 import Container from './Container';
-=======
-
-import FlexboxLayout from './container';
-
->>>>>>> 3c10391ac6620557b98d86e01541726df618350e:bearcatmanager/src/App.js
- 
 function App() {
   return (
       <>
@@ -47,11 +40,7 @@ function App() {
       </div>
     </Router>
     <hr />
-<<<<<<< HEAD:bearcatmanager/src/App.jsx
        <Container />
-=======
-       <FlexboxLayout />
->>>>>>> 3c10391ac6620557b98d86e01541726df618350e:bearcatmanager/src/App.js
        </>
   );
 }

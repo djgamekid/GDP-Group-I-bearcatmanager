@@ -7,7 +7,7 @@ body {
 }
  
 /* Container styling */
-.container {
+.Container {
     width: 80%;            /* Set the width of the container */
     margin: 50px auto;      /* Center the container and add top margin */
     padding: 20px;          /* Add padding inside the container */
@@ -17,19 +17,19 @@ body {
 }
  
 /* Styling text inside the container */
-.container h1 {
+.Container h1 {
     color: #333;            /* Dark text color */
     text-align: center;     /* Center align the heading */
 }
  
-.container p {
+.Container p {
     color: #666;            /* Slightly lighter text color */
     font-size: 18px;
     text-align: center;
 }
  
 /* Button styling */
-.container button {
+.Container button {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
@@ -40,7 +40,7 @@ body {
     cursor: pointer;
 }
  
-.container button:hover {
+.Container button:hover {
     background-color: #0056b3;
 }
  
