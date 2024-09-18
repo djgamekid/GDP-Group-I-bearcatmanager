@@ -1,7 +1,6 @@
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from '@radix-ui/react-navigation-menu';
-import { TicketDropdownComponent } from '../components/ticket-dropdown';
-import { BearcatTicketCarousel } from '../components/bearcat-ticket-carousel';
-import { useState  } from 'react';
+'use client'
+
+import { useState } from "react"
 import {
   Menubar,
   MenubarCheckboxItem,
@@ -12,27 +11,18 @@ import {
   MenubarRadioItem,
   MenubarSeparator,
   MenubarShortcut,
-  MenubarSub,
-  MenubarSubContent,
-  MenubarSubTrigger,
   MenubarTrigger,
-} from "./components/ui/menubar"
+} from "@/components/ui/menubar";
 
-function Admin() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Add this line
+export function BearcatMenubar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <>
-
-      <div className="Admin">
-        <header className="Admin-header">
-          Welcome Back Admin!
-
-        </header>
-      </div>
-      <div className="flex justify-between items-center bg-[#006633] text-white p-2">
+    (<div className="flex justify-between items-center bg-[#006633] text-white p-2">
       <h1 className="text-xl font-bold">Bearcat Event Manager</h1>
-      <Menubar className="border-none bg-transparent" onValueChange={(value) => setIsMenuOpen(!!value)}>
+      <Menubar
+        className="border-none bg-transparent"
+        onValueChange={(value) => setIsMenuOpen(!!value)}>
         <MenubarMenu>
           <MenubarTrigger className={`text-white ${isMenuOpen ? 'bg-[#004d26]' : ''}`}>File</MenubarTrigger>
           <MenubarContent className="bg-[#006633] border-[#004d26]">
@@ -99,12 +89,6 @@ function Admin() {
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
-    </div>
-    </>
+    </div>)
   );
 }
-
-export default Admin;
-
-
-
