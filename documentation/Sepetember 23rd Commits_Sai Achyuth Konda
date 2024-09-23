@@ -1,0 +1,13 @@
+Sai Achyuth Konda - Group 1 
+Today I contributed Use Case 3 Ticketing System for Event Management.
+Today, I completed the following tasks for the Bearcat Manager project:
+Primary Actor: Identified the primary actor as "User (Student or Staff)" who will interact with the ticketing system to purchase or reserve tickets.
+Scope: Clarified that the scope of this use case is focused on "Event Ticketing" within the Bearcat Manager system.
+Brief: Composed a brief description explaining that users can purchase or reserve tickets for events through the system, which manages ticket availability, processes payments if applicable, and sends confirmations and digital tickets to the users.
+Identified Stakeholders:
+Listed the stakeholders involved in this use case, including Users (Students and Staff), Admin, University Administration, and the Payment Processing Service.
+Outlined Postconditions:
+Minimal Guarantees: Ensured the system will update the ticket availability and send a confirmation notification and a digital ticket to the user.
+Success Guarantees: Guaranteed that users will successfully purchase or reserve tickets and receive all necessary event information in the digital ticket.
+Specified Preconditions:
+Detailed the necessary preconditions such as the system displaying a list of events with available
