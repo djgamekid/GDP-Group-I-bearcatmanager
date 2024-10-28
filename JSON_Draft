@@ -1,0 +1,29 @@
+```
+{
+  "admin": {
+    "adminID": "unique_identifier",
+    "name": "admin_name",
+    "email": "admin_email",
+    "role": "admin_role"
+  }
+}
+{
+  "user": {
+    "userID": "unique_identifier",
+    "name": "user_name",
+    "email": "user_email",
+    "role": "user_role"  // Possible values: "Student" or "Staff"
+  }
+}
+{
+  "event": {
+    "eventID": "unique_event_identifier",
+    "adminID": "admin_identifier",
+    "name": "event_name",
+    "description": "event_description",
+    "time": "event_start_time",
+    "location": "event_location",
+    "date": "event_date"
+  }
+}
+```
