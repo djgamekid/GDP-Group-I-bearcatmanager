@@ -26,4 +26,49 @@
     "date": "event_date"
   }
 }
+{
+  "TicketInformation": {
+    "TicketID": "unique ID",
+    "AdminID": "admin ID",
+    "EventID": "event ID",
+    "Type": "ticket type",
+    "Price": "ticket cost",
+    "Availability": "tickets available"
+  }
+}
+{
+  "AttendanceRecords": {
+    "AttendanceID": "unique ID",
+    "EventID": "event ID",
+    "UserID": "user ID",
+    "Status": "attendance status"
+  }
+}
+{
+  "NotificationDetails": {
+    "NotificationID": "unique ID",
+    "UserID": "user ID",
+    "Message": "notification message",
+    "Type": "notification type"
+  }
+}
+{
+  "PaymentInformation": {
+    "PaymentID": "unique ID",
+    "UserID": "user ID",
+    "EventID": "event ID",
+    "AdminID": "admin ID",
+    "Amount": "payment amount",
+    "PaymentStatus": "payment status",
+    "UsercartCartID": "cart ID"
+  }
+}
+{
+  "Cart": {
+    "CartID": "unique ID",
+    "UserID": "user ID",
+    "CreatedAt": "creation timestamp",
+    "Status": "cart status"
+  }
+}
 ```
