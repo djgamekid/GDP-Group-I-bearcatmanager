@@ -104,12 +104,6 @@
   },
 }
 {
-  "Cart": {
-    "CartID": "unique ID",
-    "UserID": "user ID",
-    "CreatedAt": "creation timestamp",
-    "Status": "cart status"
-  }
 "Cart": {
     "CartID": "60013003",
     "UserID": "0000000001",
