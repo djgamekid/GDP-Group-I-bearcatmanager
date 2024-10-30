@@ -83,6 +83,15 @@
     "PaymentStatus": "payment status",
     "UsercartCartID": "cart ID"
   }
+"PaymentInformation": {
+    "PaymentID": "PAY123456",
+    "UserID": "USR1001",
+    "EventID": "EVT5678",
+    "AdminID": "ADM2002",
+    "Amount": "$150.00",
+    "PaymentStatus": "Completed",
+    "UsercartCartID": "CART3003"
+  },
 }
 {
   "Cart": {
@@ -90,6 +99,12 @@
     "UserID": "user ID",
     "CreatedAt": "creation timestamp",
     "Status": "cart status"
+  }
+"Cart": {
+    "CartID": "CART3003",
+    "UserID": "USR1001",
+    "CreatedAt": "2024-10-25T14:45:00Z",
+    "Status": "Active"
   }
 }
 ```
