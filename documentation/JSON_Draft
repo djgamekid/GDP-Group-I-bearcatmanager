@@ -84,13 +84,23 @@
     "UsercartCartID": "cart ID"
   }
 "PaymentInformation": {
-    "PaymentID": "PAY123456",
-    "UserID": "USR1001",
-    "EventID": "EVT5678",
-    "AdminID": "ADM2002",
+    "PaymentID": "10123456",
+    "UserID": "0000000001",
+    "EventID": "0123456789",
+    "AdminID": "0110101000",
     "Amount": "$150.00",
     "PaymentStatus": "Completed",
-    "UsercartCartID": "CART3003"
+    "UsercartCartID": "60013003"
+  }
+{
+  "PaymentInformation": {
+    "PaymentID": "564654321",
+    "UserID": "0000000002",
+    "EventID": "0123456789",
+    "AdminID": "0110101000",
+    "Amount": "$75.00",
+    "PaymentStatus": "Pending",
+    "UsercartCartID": "70014004"
   },
 }
 {
@@ -101,10 +111,16 @@
     "Status": "cart status"
   }
 "Cart": {
-    "CartID": "CART3003",
-    "UserID": "USR1001",
+    "CartID": "60013003",
+    "UserID": "0000000001",
     "CreatedAt": "2024-10-25T14:45:00Z",
     "Status": "Active"
+  }
+"Cart": {
+    "CartID": "70014004",
+    "UserID": "0000000002",
+    "CreatedAt": "2024-10-25T15:00:00Z",
+    "Status": "Pending"
   }
 }
 ```
