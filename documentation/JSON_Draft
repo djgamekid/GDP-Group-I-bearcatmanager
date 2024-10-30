@@ -49,40 +49,41 @@
 }
 {
   "TicketInformation": {
-    "TicketID": "unique ID",
-    "AdminID": "admin ID",
-    "EventID": "event ID",
-    "Type": "ticket type",
-    "Price": "ticket cost",
-    "Availability": "tickets available"
+    "TicketID": "1234567890",
+    "AdminID": "0110101000",
+    "EventID": "0123456789",
+    "Type": "VIP",
+    "Price": "$50.00",
+    "Availability": "100"
   }
 }
 {
   "AttendanceRecords": {
-    "AttendanceID": "unique ID",
-    "EventID": "event ID",
-    "UserID": "user ID",
-    "Status": "attendance status"
+    "AttendanceID": "9876543210",
+    "EventID": "0123456789",
+    "UserID": "0000000001",
+    "Status": "Present"
   }
 }
 {
   "NotificationDetails": {
-    "NotificationID": "unique ID",
-    "UserID": "user ID",
-    "Message": "notification message",
-    "Type": "notification type"
+    "NotificationID": "4567890123",
+    "UserID": "0000000002",
+    "Message": "Your payment for the Football game event is pending. Please complete the payment to confirm your ticket.",
+    "Type": "Payment Reminder"
   }
 }
 {
   "PaymentInformation": {
-    "PaymentID": "unique ID",
-    "UserID": "user ID",
-    "EventID": "event ID",
-    "AdminID": "admin ID",
-    "Amount": "payment amount",
-    "PaymentStatus": "payment status",
-    "UsercartCartID": "cart ID"
+    "PaymentID": "10123456",
+    "UserID": "0000000001",
+    "EventID": "0123456789",
+    "AdminID": "0110101000",
+    "Amount": "$150.00",
+    "PaymentStatus": "Completed",
+    "UsercartCartID": "60013003"
   }
+}
 "PaymentInformation": {
     "PaymentID": "10123456",
     "UserID": "0000000001",
