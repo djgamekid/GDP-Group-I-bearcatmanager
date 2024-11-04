@@ -1,29 +1,121 @@
 ```
 {
   "admin": {
-    "adminID": "unique_identifier",
+    "adminID": 0110101000,
     "name": "admin_name",
-    "email": "admin_email",
-    "role": "admin_role"
+    "email": "admin_email@gmail.com",
+    "role": "Owner"
+  }
+"admin": {
+    "adminID": "0110102001",
+    "name": "Jordan Smith",
+    "email": "jordan.smith@schooladmin.com",
+    "role": "Coordinator"
   }
 }
 {
   "user": {
-    "userID": "unique_identifier",
-    "name": "user_name",
-    "email": "user_email",
-    "role": "user_role"  // Possible values: "Student" or "Staff"
+    "userID": 0000000001,
+    "name": "Anthony",
+    "email": "user_email@gmail.com",
+    "role": "Student"  // Possible values: "Student" or "Staff"
+  }
+"user": {
+    "userID": "0000000002",
+    "name": "Sophia Lee",
+    "email": "sophia.lee@studentemail.com",
+    "role": "Staff"  // Possible values: "Student" or "Staff"
   }
 }
 {
   "event": {
-    "eventID": "unique_event_identifier",
-    "adminID": "admin_identifier",
-    "name": "event_name",
-    "description": "event_description",
-    "time": "event_start_time",
-    "location": "event_location",
-    "date": "event_date"
+      "eventID": 0123456789,
+    "adminID": 0110101000,
+    "name": "Football game",
+    "description": "There will be a football game this saturday agaisnt wahsintgton state university, the bearcats got this in the bag",
+    "time": "7:00pm",
+    "location": "Bearcat Areana",
+    "date": 2012-04-23T18:25:43.511Z
+  }
+"event": {
+    "eventID": "0123456790",
+    "adminID": "0110102001",
+    "name": "Art Exhibition",
+    "description": "An exhibition showcasing the artwork created by the senior art students.",
+    "time": "5:30pm",
+    "location": "Main Hall Gallery",
+    "date": "2023-11-15T17:30:00.000Z"
+  }
+}
+{
+  "TicketInformation": {
+    "TicketID": "1234567890",
+    "AdminID": "0110101000",
+    "EventID": "0123456789",
+    "Type": "VIP",
+    "Price": "$50.00",
+    "Availability": "100"
+  }
+}
+{
+  "AttendanceRecords": {
+    "AttendanceID": "9876543210",
+    "EventID": "0123456789",
+    "UserID": "0000000001",
+    "Status": "Present"
+  }
+}
+{
+  "NotificationDetails": {
+    "NotificationID": "4567890123",
+    "UserID": "0000000002",
+    "Message": "Your payment for the Football game event is pending. Please complete the payment to confirm your ticket.",
+    "Type": "Payment Reminder"
+  }
+}
+{
+  "PaymentInformation": {
+    "PaymentID": "10123456",
+    "UserID": "0000000001",
+    "EventID": "0123456789",
+    "AdminID": "0110101000",
+    "Amount": "$150.00",
+    "PaymentStatus": "Completed",
+    "UsercartCartID": "60013003"
+  }
+}
+"PaymentInformation": {
+    "PaymentID": "10123456",
+    "UserID": "0000000001",
+    "EventID": "0123456789",
+    "AdminID": "0110101000",
+    "Amount": "$150.00",
+    "PaymentStatus": "Completed",
+    "UsercartCartID": "60013003"
+  }
+{
+  "PaymentInformation": {
+    "PaymentID": "564654321",
+    "UserID": "0000000002",
+    "EventID": "0123456789",
+    "AdminID": "0110101000",
+    "Amount": "$75.00",
+    "PaymentStatus": "Pending",
+    "UsercartCartID": "70014004"
+  },
+}
+{
+"Cart": {
+    "CartID": "60013003",
+    "UserID": "0000000001",
+    "CreatedAt": "2024-10-25T14:45:00Z",
+    "Status": "Active"
+  }
+"Cart": {
+    "CartID": "70014004",
+    "UserID": "0000000002",
+    "CreatedAt": "2024-10-25T15:00:00Z",
+    "Status": "Pending"
   }
 }
 ```
