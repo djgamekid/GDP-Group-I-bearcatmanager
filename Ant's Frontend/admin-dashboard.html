@@ -10,17 +10,22 @@
     <header>
         <h1>Admin Dashboard</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="events.html">Events</a>
+            <a href="index.html">Logout</a>
         </nav>
     </header>
+
     <main>
-        <section class="admin-controls">
-            <h2>Create New Event</h2>
-            <button>Add Event</button>
+        <!-- Create Event Button -->
+        <div class="create-event-container">
+            <a href="admin-creation.html" class="cta-button">Create New Event</a>
+        </div>
+        <!-- Section to List Existing Events -->
+        <section class="event-list">
             <h2>Manage Events</h2>
-            <p>List of events with edit and delete options.</p>
+            <!-- Event items will go here -->
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>

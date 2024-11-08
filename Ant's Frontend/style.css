@@ -172,7 +172,11 @@ label {
 
 input[type="email"],
 input[type="password"],
-input[type="text"] {
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea {
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -183,9 +187,21 @@ input[type="text"] {
     box-sizing: border-box;
 }
 
-/* Button within Forms */
+/* Form Button within Forms */
 button[type="submit"] {
     margin-top: 10px;
+}
+
+/* Admin Controls and Form for Creating Events */
+.admin-controls form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-controls label {
+    font-weight: bold;
+    color: var(--bearcat-green);
 }
 
 /* Form Links */
