@@ -192,6 +192,11 @@ button[type="submit"] {
     margin-top: 10px;
 }
 
+/* Align Create Event button centrally and add spacing */
+.create-event-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
 /* Admin Controls and Form for Creating Events */
 .admin-controls form {
     display: flex;
