@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"></script>
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"></script>
+    <!-- Firebase Realtime Database (if needed) -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
+    <script defer src="firebase-init.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Create Event Button -->
+        <div class="create-event-container">
+            <a href="admin-creation.html" class="cta-button">Create New Event</a>
+        </div>
+        <!-- Section to List Existing Events -->
+        <section class="event-list">
+            <h2>Manage Events</h2>
+            <!-- Event items will go here -->
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
