@@ -1,10 +1,20 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"></script>
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"></script>
+    <!-- Firebase Realtime Database (if needed) -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
+    <script defer src="firebase-init.js"></script>
+
 </head>
 <body>
     <header>
@@ -22,45 +32,4 @@
         </section>
     </main>
 </body>
-<<<<<<< Updated upstream
-</html> -->
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Event Cart</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        function redirectToCheckout() {
-            window.location.href = "event_checkout.html";
-        }
-    </script>
-</head>
-<body>
-    <header>
-        <h1>Your Event Cart</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="events.html">Events</a>
-        </nav>
-    </header>
-    <main>
-        <section class="cart">
-            <h2>Selected Tickets</h2>
-            <p>Here are the tickets you've added to your cart:</p>
-            <ul>
-                <li>Event 1: Front Row - $50</li>
-                <li>Event 2: General Admission - $30</li>
-            </ul>
-            <button onclick="redirectToCheckout()">Checkout</button>
-        </section>
-    </main>
-</body>
 </html>
-=======
-</html> 
-
->>>>>>> Stashed changes
