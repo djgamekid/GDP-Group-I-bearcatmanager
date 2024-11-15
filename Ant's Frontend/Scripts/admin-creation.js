@@ -1,7 +1,10 @@
+// Ensure Firebase is initialized
+import { db } from './firebase-init.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('create-event-form');
 
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', async (event) => {
         event.preventDefault();
 
         // Get form data
@@ -11,15 +14,21 @@ document.addEventListener('DOMContentLoaded', () => {
             time: document.getElementById('event-time').value,
             location: document.getElementById('event-location').value,
             description: document.getElementById('event-description').value,
-            tickets: document.getElementById('event-tickets').value,
-            price: document.getElementById('event-price').value,
+            tickets: parseInt(document.getElementById('event-tickets').value, 10),
+            price: parseFloat(document.getElementById('event-price').value),
         };
 
-        // Save data to localStorage
-        localStorage.setItem('eventData', JSON.stringify(eventData));
+        try {
+            // Save event data to Firestore
+            const docRef = await db.collection('events').add(eventData);
+            console.log('Event created with ID:', docRef.id);
 
-        // Redirect or show a confirmation message
-        alert('Event created successfully!');
-        window.location.href = 'event-summary.html'; // Redirect to another page
+            // Redirect or show a confirmation message
+            alert('Event created successfully!');
+            window.location.href = 'event-summary.html'; // Redirect to another page
+        } catch (error) {
+            console.error('Error adding event to Firestore:', error);
+            alert('Failed to create event. Please try again.');
+        }
     });
 });

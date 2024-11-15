@@ -1,3 +1,7 @@
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+
 const firebaseConfig = {
     apiKey: "AIzaSyCUkF0UxSM1vYwamXGJSEUYtMtRysAj4D4",
     authDomain: "bearcat-event-manager.firebaseapp.com",
@@ -9,11 +13,10 @@ const firebaseConfig = {
   };
 
   // Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
-
-// Initialize Firebase services
-const db = firebase.firestore();
-const auth = firebase.auth();
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const auth = getAuth(app);
 
 // Export the services (optional, if used in other files)
 export { app, db, auth };
+
