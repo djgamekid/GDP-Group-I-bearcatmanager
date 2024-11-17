@@ -1,51 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Cards</title>
-    <style>
-        .card {
-            border: 1px solid #ccc;
-            padding: 16px;
-            margin: 8px;
-            border-radius: 8px;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-    <h1>Event Form</h1>
-    <form id="eventForm">
-        <label for="title">Event Title:</label>
-        <input type="text" id="title" required><br><br>
-
-        <label for="date">Event Date:</label>
-        <input type="date" id="date" required><br><br>
-
-        <label for="time">Event Time:</label>
-        <input type="time" id="time" required><br><br>
-
-        <label for="location">Event Location:</label>
-        <input type="text" id="location" required><br><br>
-
-        <label for="description">Event Description:</label>
-        <textarea id="description" required></textarea><br><br>
-
-        <label for="tickets">Number of Tickets:</label>
-        <input type="number" id="tickets" required><br><br>
-
-        <label for="price">Ticket Price:</label>
-        <input type="number" id="price" required step="0.01"><br><br>
-
-        <button type="submit">Submit</button>
-    </form>
-
-    <h2>Event Cards</h2>
-    <div id="cardsContainer"></div>
-
-    <script>
-        const apiKey = "AIzaSyCUkF0UxSM1vYwamXGJSEUYtMtRysAj4D4";
+const apiKey = "AIzaSyCUkF0UxSM1vYwamXGJSEUYtMtRysAj4D4";
         const projectId = "bearcat-event-manager";
         const collectionName = "eventsCollection";
 
@@ -133,6 +86,3 @@
 
         // Initial fetch to populate cards
         fetchAndDisplayCards();
-    </script>
-</body>
-</html>
