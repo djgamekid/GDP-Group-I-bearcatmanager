@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('create-event-form');
 
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // Save event data to Firestore
-            const docRef = await window.db.collection('events').add(eventData); // Using window.db
+            const docRef = await window.db.collection('events').add(eventData);
             console.log('Event created with ID:', docRef.id);
 
             // Redirect or show a confirmation message
