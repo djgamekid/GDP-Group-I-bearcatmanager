@@ -11,11 +11,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();  // Get Firestore reference
-const auth = firebase.auth();  // Get Auth reference
 
-// Make Firebase objects accessible globally
-window.db = db;
-window.auth = auth;
 
 console.log("Firebase initialized successfully");
