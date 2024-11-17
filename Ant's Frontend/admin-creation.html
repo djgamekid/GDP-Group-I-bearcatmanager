@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Cards</title>
-    <style>
+    <!-- <style>
         .card {
             border: 1px solid #ccc;
             padding: 16px;
@@ -12,7 +12,9 @@
             border-radius: 8px;
             box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
         }
-    </style>
+    </style> -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <h1>Event Form</h1>
@@ -102,13 +104,13 @@
                 const card = document.createElement("div");
                 card.className = "card";
                 card.innerHTML = `
-                    <h3>${fields.title.stringValue}</h3>
-                    <p><strong>Date:</strong> ${fields.date.stringValue}</p>
-                    <p><strong>Time:</strong> ${fields.time.stringValue}</p>
-                    <p><strong>Location:</strong> ${fields.location.stringValue}</p>
-                    <p><strong>Description:</strong> ${fields.description.stringValue}</p>
-                    <p><strong>Tickets:</strong> ${fields.tickets.integerValue}</p>
-                    <p><strong>Price:</strong> $${fields.price.doubleValue.toFixed(2)}</p>
+                    <h3>${fields.title?.stringValue}</h3>
+                    <p><strong>Date:</strong> ${fields.date?.stringValue}</p>
+                    <p><strong>Time:</strong> ${fields.time?.stringValue}</p>
+                    <p><strong>Location:</strong> ${fields.location?.stringValue}</p>
+                    <p><strong>Description:</strong> ${fields.description?.stringValue}</p>
+                    <p><strong>Tickets:</strong> ${fields.tickets?.integerValue}</p>
+                    <p><strong>Price:</strong> $${fields.price?.doubleValue.toFixed(2)}</p>
                 `;
                 cardsContainer.appendChild(card);
             });
