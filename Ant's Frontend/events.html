@@ -1,121 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
-    <link rel="stylesheet" href="style.css">
-   
-    <script defer src="firebase-init.js"></script>
-
-</head>
-<body>
-    <header>
-        <h1>Available Events</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cart.html">Cart</a>
-        </nav>
-    </header>
-    <main>
-        <section class="event-list">
-            <div class="event">
-                <h2>Event 1</h2>
-                <p>Details about Event 1.</p>
-                <button>View Details</button>
-                <button>Register</button>
-                <button>Purchase Ticket</button>
-                <!-- <button onclick="location.href='event1-details.html'">View Details</button>
-                <button onclick="location.href='event1-register.html'">Register</button>
-                <button onclick="location.href='event1-purchase.html'">Purchase Ticket</button> -->
-            </div>
-            <div class="event">
-                <h2>Event 2</h2>
-                <p>Details about Event 2.</p>
-                <button>View Details</button>
-                <button>Register</button>
-                <button>Purchase Ticket</button>
-                <!-- <button onclick="location.href='event2-details.html'">View Details</button>
-                <button onclick="location.href='event2-register.html'">Register</button>
-                <button onclick="location.href='event2-purchase.html'">Purchase Ticket</button> -->
-            </div>
-        </section>
-    </main>
-</body>
-</html> -->
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Available Events</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cart.html">Cart</a>
-            <a href="logout.html">Logout</a>
-        </nav>
-    </header>
-    <main>
-        <section class="event-list" id="event-list">
-            <div class="event">
-                <h2>Event 1</h2>
-                <p>Details about Event 1.</p>
-                <button>View Details</button>
-                <button>Register</button>
-                <button>Purchase Ticket</button>
-            </div>
-            <div class="event">
-                <h2>Event 2</h2>
-                <p>Details about Event 2.</p>
-                <button>View Details</button>
-                <button>Register</button>
-                <button>Purchase Ticket</button>
-            </div>
-        </section>
-        <section class="create-event">
-            <h2>Create New Event</h2>
-            <form id="create-event-form">
-                <label for="event-title">Event Title:</label>
-                <input type="text" id="event-title" name="event-title" required>
-                <label for="event-details">Event Details:</label>
-                <textarea id="event-details" name="event-details" required></textarea>
-                <button type="submit">Create Event</button>
-            </form>
-        </section>
-    </main>
-    <script>
-        document.getElementById('create-event-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const eventTitle = document.getElementById('event-title').value;
-            const eventDetails = document.getElementById('event-details').value;
-            
-            const newEvent = document.createElement('div');
-            newEvent.classList.add('event');
-            newEvent.innerHTML = `
-                <h2>${eventTitle}</h2>
-                <p>${eventDetails}</p>
-                <button>View Details</button>
-                <button>Register</button>
-                <button>Purchase Ticket</button>
-            `;
-            
-            document.getElementById('event-list').appendChild(newEvent);
-            
-            document.getElementById('create-event-form').reset();
-        });
-    </script>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,17 +22,17 @@
                 <p>Details about Event 1.</p>
                 <button onclick="location.href='view-details.html?event=1'">View Details</button>
                 <button onclick="location.href='register.html?event=1'">Register</button>
-                <button onclick="location.href='purchase-ticket.html?event=1'">Purchase Ticket</button>
+                <button onclick="location.href='cart.html?event=1'">Add To Cart</button>
             </div>
             <div class="event">
                 <h2>Event 2</h2>
                 <p>Details about Event 2.</p>
                 <button onclick="location.href='view-details.html?event=2'">View Details</button>
                 <button onclick="location.href='register.html?event=2'">Register</button>
-                <button onclick="location.href='purchase-ticket.html?event=2'">Purchase Ticket</button>
+                <button onclick="location.href='cart.html?event=2'">Add To Cart</button>
             </div>
         </section>
-        <section class="create-event">
+        <!-- <section class="create-event">
             <h2>Create New Event</h2>
             <form id="create-event-form">
                 <label for="event-title">Event Title:</label>
@@ -159,7 +41,7 @@
                 <textarea id="event-details" name="event-details" required></textarea>
                 <button type="submit">Create Event</button>
             </form>
-        </section>
+        </section> -->
     </main>
     <script>
         document.getElementById('create-event-form').addEventListener('submit', function(event) {
@@ -174,7 +56,7 @@
                 <p>${eventDetails}</p>
                 <button onclick="location.href='view-details.html?event=${eventTitle}'">View Details</button>
                 <button onclick="location.href='register.html?event=${eventTitle}'">Register</button>
-                <button onclick="location.href='purchase-ticket.html?event=${eventTitle}'">Purchase Ticket</button>
+                <button onclick="location.href='cart.html?event=${eventTitle}'">Add To Cart</button>
             `;
             
             document.getElementById('event-list').appendChild(newEvent);

@@ -5,6 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Dashboard</title>
     <link rel="stylesheet" href="=style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #2e7d32;
+        }
+
+        .dashboard p {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .card {
+            background-color: #e8f5e9;
+            border: 1px solid #2e7d32;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #1b5e20;
+        }
+
+        .card p {
+            margin: 5px 0;
+            color: #2e7d32;
+        }
+    </style>
 
 </head>
 <body>
@@ -25,6 +83,49 @@
             <h2>Notifications</h2>
             <p>Latest updates and notifications.</p>
         </section>
+        <div id="cardsContainer"></div>
     </main>
+    <script>
+        const apiKey = "AIzaSyCUkF0UxSM1vYwamXGJSEUYtMtRysAj4D4";
+        const projectId = "bearcat-event-manager";
+        const collectionName = "eventsCollection";
+
+
+        const cardsContainer = document.getElementById("cardsContainer");
+
+        fetchAndDisplayCards(); 
+              async function fetchAndDisplayCards() {
+            const url = `https://firestore.googleapis.com/v1/projects/${projectId}/databases/(default)/documents/${collectionName}?key=${apiKey}`;
+            const response = await fetch(url);
+
+            if (response.ok) {
+                const data = await response.json();
+                displayCards(data.documents || []);
+            } else {
+                console.error("Error fetching events:", await response.text());
+            }
+        }
+
+        // Display events as cards
+        function displayCards(documents) {
+            cardsContainer.innerHTML = ""; // Clear existing cards
+            documents.forEach((doc) => {
+                const fields = doc.fields;
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
+                    <h3>${fields.title?.stringValue}</h3>
+                    <p><strong>Date:</strong> ${fields.date?.stringValue}</p>
+                    <p><strong>Time:</strong> ${fields.time?.stringValue}</p>
+                    <p><strong>Location:</strong> ${fields.location?.stringValue}</p>
+                    <p><strong>Description:</strong> ${fields.description?.stringValue}</p>
+                    <p><strong>Tickets:</strong> ${fields.tickets?.integerValue}</p>
+                    <p><strong>Price:</strong> $${fields.price?.doubleValue.toFixed(2)}</p>
+                `;
+                cardsContainer.appendChild(card);
+            });
+        }
+    
+    </script>
 </body>
 </html>
