@@ -3,48 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Cards</title>
-    <!-- <style>
-        .card {
-            border: 1px solid #ccc;
-            padding: 16px;
-            margin: 8px;
-            border-radius: 8px;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-        }
-    </style> -->
+    <title>Event Submission</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <h1>Event Form</h1>
-    <form id="eventForm">
-        <label for="title">Event Title:</label>
-        <input type="text" id="title" required><br><br>
+    <header>
+        <h1>Event Form</h1>
+    </header>
 
-        <label for="date">Event Date:</label>
-        <input type="date" id="date" required><br><br>
+    <main>
+        <section class="form-container">
+            <form id="eventForm">
+                <label for="title">Event Title:</label>
+                <input type="text" id="title" required><br><br>
 
-        <label for="time">Event Time:</label>
-        <input type="time" id="time" required><br><br>
+                <label for="date">Event Date:</label>
+                <input type="date" id="date" required><br><br>
 
-        <label for="location">Event Location:</label>
-        <input type="text" id="location" required><br><br>
+                <label for="time">Event Time:</label>
+                <input type="time" id="time" required><br><br>
 
-        <label for="description">Event Description:</label>
-        <textarea id="description" required></textarea><br><br>
+                <label for="location">Event Location:</label>
+                <input type="text" id="location" required><br><br>
 
-        <label for="tickets">Number of Tickets:</label>
-        <input type="number" id="tickets" required><br><br>
+                <label for="description">Event Description:</label>
+                <textarea id="description" required></textarea><br><br>
 
-        <label for="price">Ticket Price:</label>
-        <input type="number" id="price" required step="0.01"><br><br>
+                <label for="tickets">Number of Tickets:</label>
+                <input type="number" id="tickets" required><br><br>
 
-        <button type="submit">Submit</button>
-    </form>
+                <label for="price">Ticket Price:</label>
+                <input type="number" id="price" required step="0.01"><br><br>
 
-    <h2>Event Cards</h2>
-    <div id="cardsContainer"></div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Event Manager</p>
+    </footer>
 
     <script>
         const apiKey = "AIzaSyCUkF0UxSM1vYwamXGJSEUYtMtRysAj4D4";
@@ -52,7 +50,6 @@
         const collectionName = "eventsCollection";
 
         const form = document.getElementById("eventForm");
-        const cardsContainer = document.getElementById("cardsContainer");
 
         // Add a document to Firestore using the REST API
         async function addDocument(data) {
@@ -76,44 +73,11 @@
             });
 
             if (response.ok) {
-                console.log("Event added successfully");
-                fetchAndDisplayCards(); // Refresh the displayed cards
+                alert("Event submitted successfully!");
             } else {
-                console.error("Error adding event:", await response.text());
+                alert("Error submitting event.");
+                console.error("Error:", await response.text());
             }
-        }
-
-        // Fetch all documents from Firestore using the REST API
-        async function fetchAndDisplayCards() {
-            const url = `https://firestore.googleapis.com/v1/projects/${projectId}/databases/(default)/documents/${collectionName}?key=${apiKey}`;
-            const response = await fetch(url);
-
-            if (response.ok) {
-                const data = await response.json();
-                displayCards(data.documents || []);
-            } else {
-                console.error("Error fetching events:", await response.text());
-            }
-        }
-
-        // Display events as cards
-        function displayCards(documents) {
-            cardsContainer.innerHTML = ""; // Clear existing cards
-            documents.forEach((doc) => {
-                const fields = doc.fields;
-                const card = document.createElement("div");
-                card.className = "card";
-                card.innerHTML = `
-                    <h3>${fields.title?.stringValue}</h3>
-                    <p><strong>Date:</strong> ${fields.date?.stringValue}</p>
-                    <p><strong>Time:</strong> ${fields.time?.stringValue}</p>
-                    <p><strong>Location:</strong> ${fields.location?.stringValue}</p>
-                    <p><strong>Description:</strong> ${fields.description?.stringValue}</p>
-                    <p><strong>Tickets:</strong> ${fields.tickets?.integerValue}</p>
-                    <p><strong>Price:</strong> $${fields.price?.doubleValue.toFixed(2)}</p>
-                `;
-                cardsContainer.appendChild(card);
-            });
         }
 
         // Handle form submission
@@ -132,9 +96,6 @@
             addDocument(data); // Add the form data to Firestore
             form.reset(); // Reset the form
         });
-
-        // Initial fetch to populate cards
-        fetchAndDisplayCards();
     </script>
 </body>
 </html>

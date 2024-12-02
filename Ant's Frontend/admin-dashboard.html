@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="./Scripts/firebase-init.js"></script>
     <script defer src="./Scripts/admin-creation.js"></script>
+    <script defer src="./Scripts/admin-dashboard.js"></script>
 </head>
 <body>
     <header>
@@ -16,14 +17,13 @@
         </nav>
     </header>
     <main>
-        <!-- Create Event Button -->
         <div class="create-event-container">
             <a href="admin-creation.html" class="cta-button">Create New Event</a>
         </div>
         <!-- Section to List Existing Events -->
         <section class="event-list">
             <h2>Manage Events</h2>
-            <!-- Event items will go here -->
+            <div id="eventContainer" class="event-cards"></div>
         </section>
     </main>
 
