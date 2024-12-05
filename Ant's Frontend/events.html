@@ -34,6 +34,8 @@
                 <button onclick="location.href='cart.html?event=2'">Add To Cart</button>
             </div>
         </section>
+        <div id="eventContainer" class="event-cards"></div>
+
         <!-- <section class="create-event">
             <h2>Create New Event</h2>
             <form id="create-event-form">
@@ -46,65 +48,66 @@
         </section> -->
     </main>
     <script>
-        document.getElementById('create-event-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const eventTitle = document.getElementById('event-title').value;
-            const eventDetails = document.getElementById('event-details').value;
+        // document.getElementById('create-event-form').addEventListener('submit', function(event) {
+        //     event.preventDefault();
+        //     const eventTitle = document.getElementById('event-title').value;
+        //     const eventDetails = document.getElementById('event-details').value;
             
-            const newEvent = document.createElement('div');
-            newEvent.classList.add('event');
-            newEvent.innerHTML = `
-                <h2>${eventTitle}</h2>
-                <p>${eventDetails}</p>
-                <button onclick="location.href='view-details.html?event=${eventTitle}'">View Details</button>
-                <button onclick="location.href='register.html?event=${eventTitle}'">Register</button>
-                <button onclick="location.href='cart.html?event=${eventTitle}'">Add To Cart</button>
-            `;
+        //     const newEvent = document.createElement('div');
+        //     newEvent.classList.add('event');
+        //     newEvent.innerHTML = `
+        //         <h2>${eventTitle}</h2>
+        //         <p>${eventDetails}</p>
+        //         <button onclick="location.href='view-details.html?event=${eventTitle}'">View Details</button>
+        //         <button onclick="location.href='register.html?event=${eventTitle}'">Register</button>
+        //         <button onclick="location.href='cart.html?event=${eventTitle}'">Add To Cart</button>
+        //     `;
             
-            document.getElementById('event-list').appendChild(newEvent);
+        //     document.getElementById('event-list').appendChild(newEvent);
             
-            document.getElementById('create-event-form').reset();
-        });
+        //     document.getElementById('create-event-form').reset();
+        // });
 
 
 // // Fetch all documents from Firestore
-// async function fetchEvents() {
-//     const url = `https://firestore.googleapis.com/v1/projects/${projectId}/databases/(default)/documents/${collectionName}?key=${apiKey}`;
-//     const response = await fetch(url);
+ async function fetchEvents() {
+     const url = `https://firestore.googleapis.com/v1/projects/${projectId}/databases/(default)/documents/${collectionName}?key=${apiKey}`;
+     const response = await fetch(url);
 
-//     if (response.ok) {
-//         const data = await response.json();
-//         displayEvents(data.documents || []);
-//     } else {
-//         console.error("Error fetching events:", await response.text());
-//     }
-// }
+    if (response.ok) {
+         const data = await response.json();
+         displayEvents(data.documents || []);
+     } else {
+         console.error("Error fetching events:", await response.text());
+     }
+ }
 
-// // Display fetched events
-// function displayEvents(documents) {
-//     eventContainer.innerHTML = ""; // Clear current content
-//     documents.forEach((doc) => {
-//         const fields = doc.fields;
-//         const id = doc.name.split("/").pop(); // Extract document ID
+// Display fetched events
+function displayEvents(documents) {
+    eventContainer.innerHTML = ""; // Clear current content
+    documents.forEach((doc) => {
+        const fields = doc.fields;
+        const id = doc.name.split("/").pop(); // Extract document ID
 
-//         const card = document.createElement("div");
-//         card.className = "event-card";
-//         card.innerHTML = `
-//             <h3>${fields.title?.stringValue}</h3>
-//             <p><strong>Date:</strong> ${fields.date?.stringValue}</p>
-//             <p><strong>Time:</strong> ${fields.time?.stringValue}</p>
-//             <p><strong>Location:</strong> ${fields.location?.stringValue}</p>
-//             <p><strong>Description:</strong> ${fields.description?.stringValue}</p>
-//             <p><strong>Tickets:</strong> ${fields.tickets?.integerValue}</p>
-//             <p><strong>Price:</strong> $${fields.price?.doubleValue.toFixed(2)}</p>
-//             <button onclick="editEvent('${id}')">Edit</button>
-//             <button onclick="deleteEvent('${id}')">Delete</button>
-//         `;
-//         eventContainer.appendChild(card);
-//     });
-// }
-// // Fetch and display events on page load
-// document.addEventListener("DOMContentLoaded", fetchEvents);
+        const card = document.createElement("div");
+        card.className = "event-card";
+        card.innerHTML = `
+            <h3>${fields.title?.stringValue}</h3>
+            <p><strong>Date:</strong> ${fields.date?.stringValue}</p>
+            <p><strong>Time:</strong> ${fields.time?.stringValue}</p>
+            <p><strong>Location:</strong> ${fields.location?.stringValue}</p>
+            <p><strong>Description:</strong> ${fields.description?.stringValue}</p>
+            <p><strong>Tickets:</strong> ${fields.tickets?.integerValue}</p>
+            <p><strong>Price:</strong> $${fields.price?.doubleValue.toFixed(2)}</p>
+            <button onclick="viewDetails('${id}')">View Details</button>
+            <button onclick="register('${id}')">Register</button>
+            <button onclick="addCart('${id}')">Add to cart</button>
+        `;
+        eventContainer.appendChild(card);
+    });
+}
+// Fetch and display events on page load
+document.addEventListener("DOMContentLoaded", fetchEvents);
     </script>
     
 </body>
